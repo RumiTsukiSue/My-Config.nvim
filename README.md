@@ -11,7 +11,7 @@ sudo pacman -S yazi
 sudo pacman -S luarocks
 sudo pacman -S fzf
 sudo pacman -S wl-clipboard
-git clone https://github.com/RumiTsukiSue/My-Config.nvim ~/.config/
+git clone https://github.com/RumiTsukiSue/My-Config.nvim ~/.config/nvim
 ```
 
 
@@ -71,9 +71,31 @@ rm -rf ~/.cache/nvim/
 Lazy.nvim 实际存储所有下载的插件代码的地方。
 
 一般不需要手动删除，如果插件是不再需要的，同步时会自动删除。
-
 ```
 ~/.local/share/nvim/lazy/
 ```
 
 
+# git同步
+
+```
+# 1. 确保你在正确的仓库目录
+cd ~/.config/nvim/
+
+# 2. 检查状态，确保所有修改都已提交
+git status
+
+# 如果有未提交的修改：
+# git add .
+# git commit -m "Your commit message"
+
+# 3. 拉取远程最新更改，避免冲突
+git pull origin main
+
+# 如果有冲突，解决冲突后：
+# git add .
+# git commit
+
+# 4. 推送你的本地更改
+git push -u origin main
+```
