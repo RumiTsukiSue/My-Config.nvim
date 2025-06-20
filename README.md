@@ -99,3 +99,7 @@ git pull origin main
 # 4. 推送你的本地更改
 git push -u origin main
 ```
+
+
+# BUG
+[markdown预览](https://github.com/iamcco/markdown-preview.nvim/issues/695)
