@@ -1,0 +1,5 @@
+" --- Neovim 迁移自 Vim ---
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+
+source ~/.vimrc
